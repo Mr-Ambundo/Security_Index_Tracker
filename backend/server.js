@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5000;
 //API routes
 const userRoutes = require('./src/routes/userRoutes');
 const incidentRoutes = require('./src/routes/incidentRoutes');
+const auditRoutes = require('./src/routes/auditRoutes');
 
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(cors());
 // Define routes
 app.use('/api/users', userRoutes);
 app.use('/api/incidents', incidentRoutes);
+app.use('/api/audit', auditRoutes);
 
 
 async function startServer() {
